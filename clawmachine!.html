@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Claw Machine!</title>
+
+    <style type="text/css">
+       #claw-machine {
+  position: relative;
+}
+
+#claw {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#stuffed-animal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Claw Machine!</h1>
+
+    <div id="claw-machine">
+      <img id="claw" src="claw.png" />
+      <img id="stuffed-animal" src="stuffed-animal.png" />
+    </div>
+
+    <button onclick="pickUpStuffedAnimal()">Play Claw Machine</button>
+
+<script type="text/javascript">
+  
+  function pickUpStuffedAnimal() {
+  var claw = document.getElementById("claw");
+  var stuffedAnimal = document.getElementById("stuffed-animal");
+
+  // Move the claw down to the stuffed animal
+  claw.style.top = stuffedAnimal.offsetTop + "px";
+
+  // Pick up the stuffed animal
+  stuffedAnimal.style.display = "none";
+}
+</script>
+ </body>
+</html>

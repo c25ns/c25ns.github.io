@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+
+	<style type="text/css">
+
+		.nat{
+			width:100px;
+			height:100px;
+			background-image:url(halloween.png);
+			background-size: cover;
+			display: inline-block;
+		}
+		
+		.nat:hover{
+
+			background-color: black;
+
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function makeCandy() {
+			let Candy = document.createElement("div")
+				document.body.appendChild(Candy)
+				Candy.classList.add("nat")
+		}
+
+		setInterval(makeCandy, 100)
+
+
+	</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- Import the p5.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+
+<!-- Create a div to hold the canvas -->
+<div id="sketch-holder"></div>
+
+<script>
+let squareSize = 100;
+let squareColor = 'red';
+
+function setup() {
+  // Create the canvas
+  let canvas = createCanvas(400, 400);
+  canvas.parent('sketch-holder');
+
+  // Style the canvas
+  canvas.style('display', 'block');
+  canvas.style('margin', 'auto');
+}
+
+function draw() {
+  fill(squareColor);
+  rect(width / 2 - squareSize / 2, height / 2 - squareSize / 2, squareSize, squareSize);
+}
+
+function mousePressed() {
+  // Generate a random color for the square
+  squareColor = color(random(255), random(255), random(255));
+}
+</script>
+

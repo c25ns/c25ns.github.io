@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      h1 {
+        font-size: 50px;
+        color: lavender;
+      }
+
+      #scoreboard {
+        font-size: 30px;
+        color: lightskyblue;
+      }
+
+      button {
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+    
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scoreboard</h1>
+    <div id="scoreboard">0</div>
+    <button onclick="increaseScore()">Click to increase score</button>
+    <script>
+      function increaseScore() {
+        // Get the current score from the scoreboard element
+        var scoreElement = document.getElementById("scoreboard");
+        var currentScore = parseInt(scoreElement.innerHTML);
+
+        // Increase the score by 1
+        var newScore = currentScore + 1;
+
+        // Update the scoreboard with the new score
+        scoreElement.innerHTML = newScore;
+      }
+    </script>
+  </body>
+</html>
