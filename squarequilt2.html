@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.breakfast{
+			width: 100px;
+			height: 100px;
+			background-color: lightblue;
+			display:inline-block;
+			margin: 3px;
+			background-image:url(croissant.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+
+
+	</style>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	function makeCroissant (placeholder){
+	var croissant = document.createElement("div"
+		);
+	document.body.appendChild(croissant);
+	croissant.classList.add("breakfast"
+		);
+	croissant.innerText =
+	placeholder;
+	croissant.addEventListener("click",
+		function(){
+	croissant.style.backgroundimage="url(download.jpg)"
+		})
+
+}
+
+for (var i=0;i<1000;i=i+1){makeCroissant(
+	)}
+
+
+
+
+</script>
+</body>
+</html>

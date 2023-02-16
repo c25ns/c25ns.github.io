@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="box1"></div>
+
+	<div id="box2"></div>
+
+<script type="text/javascript">
+
+	var chemQuestions =["How many grams of oxygen are needed to react with 44 grams of sulfur to form sulfur dioxide?", "How many moles of water are produced when 10 moles of hydrogen gas react with 5 moles of oxygen gas to form water vapor?","How many moles of nitrogen gas are needed to react with 3 moles of hydrogen gas to form 2 moles of ammonia?"]
+	var answers = ["S + O2 -> SO2 for every 1 mole of sulfur, 1 mole of oxygen is needed. Therefore, 44 grams of sulfur (1 mole) would require 32 grams of oxygen (1 mole) to react completely.", "2H2 + O2 -> 2H2O For every 2 moles of hydrogen, 1 mole of oxygen is needed. Therefore, 10 moles of hydrogen (20 moles of H2) would produce 10 moles of water vapor (20 moles of H2O) in this reaction.","N2 + 3H2 -> 2NH3 for every 1 mole of nitrogen, 3 moles of hydrogen are needed. Therefore, 3 moles of hydrogen would react with 1 mole of Nitrogen to produce 2 moles of Ammonia."]
+
+	function wait (){
+box2.innerText = answers[number]
+
+}
+
+var number;
+	document.addEventListener("click", function (){
+
+		number = Math.round(Math.random()*2);
+box1.innerText = chemQuestions [number]
+
+		setTimeout(wait, 2000)
+
+	})
+
+</script>
+</body>
+</html>

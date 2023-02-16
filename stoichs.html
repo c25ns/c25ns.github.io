@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stoichiometry Quiz</title>
+  <style>
+    /* Add CSS styles to style the webpage */
+    body {
+        background-color: #f2f2f2;
+    }
+    .container {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    h1 {
+        margin-top: 50px;
+    }
+    #problem {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    #answer {
+        margin-top: 20px;
+        font-size: 18px;
+        padding: 12px 20px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+    button {
+        margin-top: 20px;
+        font-size: 18px;
+        padding: 12px 20px;
+        border-radius: 4px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Stoichiometry Quiz</h1>
+    <div id="problem"></div>
+    <input type="text" id="answer" placeholder="Enter your answer here">
+    <br>
+    <button id="startButton">Start Quiz</button>
+    <button id="submitButton" disabled>Submit</button>
+  </div>
+  <script>
+    var problems = [
+        {question: "What is the balanced equation for the combustion of propane?", answer: "C3H8 + 5O2 -> 3CO2 + 4H2O"},
+        {question: "How many moles of oxygen are needed to completely react with 2 moles of sulfur?", answer: "4 moles of O2"},
+        {question: "What is the empirical formula of a compound with the following percent composition: 40.0% C, 6.7% H, and 53.3% O?", answer: "CH2O"}
+    ];
+
+    var currentProblem = 0;
+    var score = 0;
+
+    function displayProblem() {
+        document.getElementById("problem").innerHTML = problems[currentProblem].question;
+        document.getElementById("answer").value = "";
+        document.getElementById("startButton").disabled = true;
+        document.getElementById("submitButton").disabled = false;
+    }
+
+    function checkAnswer() {
+        var userAnswer = document.getElementById("answer").value.trim();
+        if (!userAnswer) {
+            alert("Please enter your answer before submitting.");
+            return;
+        }
+        if (userAnswer.toLowerCase() == problems[currentProblem].answer.toLowerCase()) {
+            score++;
+            alert("Correct! Your score is now " + score);
+        } else {
+            alert("Incorrect. The correct answer is " + problems[currentProblem].answer);
+

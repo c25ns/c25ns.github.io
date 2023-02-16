@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <style>
+      .square {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        display: inline-block;
+        transition: background-color 0.5s ease;
+        text-align: center;
+        line-height: 200px;
+        font-size: 24px;
+      }
+      
+      .square:hover {
+        background-color: red;
+        cursor: pointer;
+      }
+      
+      .square:hover span {
+        display: none;
+      }
+      
+      .square:hover:after {
+        content: "I appreciate you";
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="square" title="Hover over me">
+      <span>Happy Valentine's Day</span>
+    </div>
+  </body>
+</html>
+
