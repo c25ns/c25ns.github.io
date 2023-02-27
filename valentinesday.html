@@ -60,16 +60,18 @@
   <body>
     <div id="card">
       <div id="front">HAPPY VALENTINE'S DAY!!     💕</div>
-      <p id="message">❤You mean so much to me❤</p>
+      <p id="message">❤You mean so much to me, I hope you have an amazing day!❤</p>
       <div id="heart-icon"></div>
     </div>
 
     <script>
-      document.querySelector("#card").addEventListener("click", function() {
-        var card = document.querySelector("#card");
-        var front = document.querySelector("#front");
-        var message = document.querySelector("#message");
-        var heart = document.querySelector("#heart-icon");
+
+      var card = document.getElementById("card");
+
+      card.addEventListener("click", function() {
+        var front = document.getElementById("front");
+        var message = document.getElementById("message");
+        var heart = document.getElementById("heart-icon");
         if (message.style.display === "none") {
           card.style.height = "500px";
           message.style.display = "block";

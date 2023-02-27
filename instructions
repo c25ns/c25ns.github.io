@@ -1,0 +1,2 @@
+
+first, you make a div for the car with an ID, do background image w pdf of car, you then do an event listener for the arrow keys, make if statement for left and right keys, "move left px + 1" and same thing for right key,  and make it so the ID of the div moves 
