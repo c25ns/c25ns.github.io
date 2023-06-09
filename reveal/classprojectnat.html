@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      #box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: lightskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <script>
+
+      // Update the position of the div whenever the mouse moves
+      document.addEventListener("click", function(event){
+      	console.log(event.clientX, event.clientY);
+        var x = event.clientX;
+       	var y = event.clientY;
+        box.style.top = y-50 + "px";
+        box.style.left = x-50 + "px";
+      });
+    </script>
+  </body>
+</html>
+
+</head>
+<body>
+
+</body>
+</html>

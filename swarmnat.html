@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.pug{
+			width:100px;
+			height:100px;
+			background-image:url(romeo!.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position: absolute;
+	
+		
+		}
+
+	</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+		function pugs(){
+			var pug = document.createElement("div");
+			document.body.appendChild(pug);
+			pug.classList.add('pug')
+			pug.style.left= Math.random()*1000 + "px"
+			pug.style.top= Math.random()*1000 + "px"
+
+
+		}
+
+	for(var i=0; i<100; i=i+1){
+		pugs()
+	}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Varying Sized Circles</title>
+    <style>
+      .circle {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin: 5px;
+      }
+      
+      .circle.small {
+        width: 15px;
+        height: 15px;
+        background-color: skyblue;
+      }
+
+      .circle.medium {
+        width: 30px;
+        height: 30px;
+        background-color: lightyellow;
+
+      }
+      
+      .circle.large {
+        width: 45px;
+        height: 45px;
+        background-color: lavender;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div class="circle small"></div>
+    <div class="circle medium"></div>
+    <div class="circle large"></div>
+    <div class="circle medium"></div>
+    <div class="circle small"></div>
+  </body>
+</html>
