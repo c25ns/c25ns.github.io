@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Circle Hover Effect</title>
     <style>
-        .circle {
-            display: inline-block;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2 {
             text-align: center;
-            line-height: 150px;
-            margin: 10px;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            text-align: center;
+            line-height: 180px;
             font-size: 16px;
             font-weight: bold;
             color: #FFF;
+            transition: all 0.3s ease;
+        }
+
+        .circle:hover {
+            transform: scale(1.2);
         }
 
         .circle:nth-child(1) { background-color: skyblue; }
@@ -23,6 +41,26 @@
         .circle:nth-child(5) { background-color: deepskyblue; }
         .circle:nth-child(6) { background-color: seagreen; }
         .circle:nth-child(7) { background-color: lightcoral; }
+
+        /* Add bubble effect */
+        .circle:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .circle:hover:before {
+            transform: scale(1.2);
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -30,38 +68,48 @@
     <h2>Below you will find my projects from CS1!</h2>
 
     <div id="menu"></div>
-    <a href="project1shootingstar">
-        <div class="circle">
-            Shooting star project!
+    <a href="./revealnat/changecolors.html">
+        <div class="circle" style="top: 20%; left: 20%;">
+            Changing Colors!
         </div>
     </a>
-    <a href="classprojectnat.html">
-        <div class="circle">
-            Box with event listener!
+    <a href="./revealnat/classprojectnat.html">
+        <div class="circle" style="top: 20%; left: 40%;">
+            Box event listener!
         </div>
     </a>
-    <a href="imageshovercopy.html">
-        <div class="circle">
+    <a href="./revealnat/imageshover.html">
+        <div class="circle" style="top: 30%; left: 60%;">
             Square Quilt Project!
         </div>
     </a>
-    <a href="valentinesday.html">
-        <div class="circle">
+    <a href="./revealnat/animation.html">
+        <div class="circle" style="top: 40%; left: 80%;">
+            Box Animation!
+        </div>
+    </a>
+    <a href="./revealnat/valentinesday.html">
+        <div class="circle" style="top: 50%; left: 10%;">
             Valentine's Day Card!
         </div>
     </a>
-    <a href="carnat.html">
-        <div class="circle">
+    <a href="./revealnat/carnat.html">
+        <div class="circle" style="top: 50%; left: 40%;">
             Moving White Jeep!
         </div>
     </a>
-    <a href="./reveal.js-master/c25ns.github.io/reveal/finalproject.html">
-        <div class="circle">
+    <a href="./revealnat/tiktaktoe.html">
+        <div class="circle" style="top: 75%; left: 50%;">
+           Tik Tak Toe!
+        </div>
+    </a>
+    <a href="./reveal/natslideshow.html">
+        <div class="circle" style="top: 80%; left: 80%;">
             Slideshow!
         </div>
     </a>
-    <a href="./reveal.js-master/c25ns.github.io/reveal/finalproject.html">
-        <div class="circle">
+    <a href="./revealnat/index.html">
+        <div class="circle" style="top: 90%; left: 20%;">
             FINAL PROJECT
         </div>
     </a>

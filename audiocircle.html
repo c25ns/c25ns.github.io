@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hover Sound </title>
+    <style>
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: lightgreen;
+            margin: 50px auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle" onmouseover="playSong()"></div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '0',
+                width: '0',
+                videoId: 'su8g0540rVA', // Replace with the actual YouTube video ID
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.setVolume(100);
+        }
+
+        function playSong() {
+            player.playVideo();
+        }
+    </script>
+</body>
+</html>

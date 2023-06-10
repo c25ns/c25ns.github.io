@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #F0F8FF; /* Initial background color */
+      transition: background-color 0.5s ease;
+    }
+  </style>
+</head>
+<body onmousemove="changeColor()"></body>
+
+<script>
+  function changeColor() {
+    var colors = ["#FFD2D2", "#FFEBD2", "#FFEBCD", "#FFD8B1", "#F5F5DC"]; // Array of darker pastel colors
+    var randomColor = colors[Math.floor(Math.random() * colors.length)]; // Pick a random color from the array
+    document.body.style.backgroundColor = randomColor; // Apply the new background color
+  }
+</script>
+
+</html>

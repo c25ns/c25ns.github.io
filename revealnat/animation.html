@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pink Box Animation</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: boxAnimation 3s infinite;
+        }
+
+        .box:nth-child(1) {
+            background-color: lightpink;
+            animation-duration: 2s;
+        }
+
+        .box:nth-child(2) {
+            background-color: hotpink;
+            animation-duration: 1.5s;
+        }
+
+        .box:nth-child(3) {
+            background-color: deeppink;
+            animation-duration: 2.5s;
+        }
+
+        @keyframes boxAnimation {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <script>
+        // Add JavaScript code here if needed
+    </script>
+</body>
+</html>
